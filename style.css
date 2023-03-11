@@ -8,7 +8,7 @@
 
 html {
     min-height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 main {
@@ -37,6 +37,8 @@ body {
       "logo logo logo"
       "body body body"
       "footer footer footer";
+    max-width: 100%;
+    max-height: 100%;
     margin: 0 4rem;
     overflow: hidden;
 }
@@ -62,7 +64,13 @@ body {
     grid-area: body;
 }
   
-.image { grid-area: image; }
+.image {
+    grid-area: image; 
+}
+
+.img {
+    width: 100%;
+}
   
 .text {
     justify-self: start;
