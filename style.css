@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #674bb1;
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo logo logo"
+      "body body body"
+      "footer footer footer";
+    margin: 0 4rem;
+    overflow: hidden;
+}
+  
+.logo {
+    justify-self: start;
+    align-self: center;
+    grid-area: logo;
+}
+  
+.body {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image text";
+    grid-area: body;
+}
+  
+.image { grid-area: image; }
+  
+.text {
+    justify-self: start;
+    grid-area: text;
+    padding: 3rem 2rem 0 2rem;
+}
+  
+.footer {
+    justify-self: end;
+    align-self: center;
+    grid-area: footer;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1.25rem;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #674bb1;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #b56bd0;
+    color: #fff;
+}
+
+.footer {
+    display: flex;
+    gap: 10px;
+}
+  
+.footer i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 1rem;
+    height: 1rem;
+}
+
+.footer i:hover {
+    cursor: pointer;
+    color: #b56bd0;
+    border: 2px solid #b56bd0;
+}
+  
+
+.attribution a { 
+    color: hsl(240, 3%, 14%); 
+}
+
+footer {
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    color: #494646;
+}
+
+@media only screen and (max-width: 600px) {
+    div.container {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.5fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center;
+        justify-items: center;
+        grid-template-areas:
+          "logo"
+          "body"
+          "footer";
+        max-width: 100%;
+        height: auto;
+        margin: 1.5rem 0 3rem 0;
+        padding: 0 2rem;
+    }
+      
+    .logo {
+        justify-self: start;
+        align-self: start;
+        grid-area: logo;
+        margin-bottom: 1.5rem;
+    }
+      
+    .body {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center; 
+        justify-items: center;
+        grid-template-areas:
+          "image"
+          "text";
+        grid-area: body;
+        text-align: center;
+    }
+      
+    .image {
+        justify-self: center;
+        align-self: center;
+        grid-area: image;
+    }
+    
+    .text {
+        justify-self: center;
+        align-self: center;
+        grid-area: text;
+        padding: 1rem 0 0 0;
+    }
+    
+    .footer {
+        justify-self: center;
+        grid-area: footer; 
+    }
+
+    .img {
+        width: 350px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 15rem;
+        margin-bottom: 2.5rem;
+    }
+
+    footer {
+        display: none;
+    }
+}
